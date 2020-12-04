@@ -14,7 +14,7 @@ def time_dataframes(time_list):
 def detector():
     """
     Webcam motion detection function.
-    Shows the webcam output and draws green rectangular
+    Shows the webcam output and draws green rectangles
     around the moving object in the video.
     Works best if the first image of the video is empty
     and static and moving object appears later.
@@ -75,5 +75,6 @@ def detector():
     return times
 
 
-movement_times = detector()
-time_dataframes(movement_times)
+if __name__ == '__main__':
+    movement_times = detector()
+    time_dataframes(movement_times)
